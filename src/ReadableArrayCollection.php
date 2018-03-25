@@ -2,7 +2,7 @@
 
 namespace Bitty\Collection;
 
-class ArrayCollection implements CollectionInterface
+class ReadableArrayCollection implements ReadableCollectionInterface
 {
     /**
      * @var array
@@ -35,14 +35,6 @@ class ArrayCollection implements CollectionInterface
         }
 
         return $this->data[$key];
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function set($key, $value)
-    {
-        $this->data[$key] = $value;
     }
 
     /**
