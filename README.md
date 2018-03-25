@@ -1,1 +1,1 @@
-# bitty-collection
+# Bitty Collection
