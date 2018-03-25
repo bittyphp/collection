@@ -2,7 +2,7 @@
 
 namespace Bitty\Collection;
 
-interface CollectionInterface
+interface ReadableCollectionInterface
 {
     /**
      * Checks if a key exists in the collection.
@@ -24,14 +24,6 @@ interface CollectionInterface
      * @return mixed
      */
     public function get($key, $default = null);
-
-    /**
-     * Sets the value for a key in the collection.
-     *
-     * @param string $key
-     * @param mixed $value
-     */
-    public function set($key, $value);
 
     /**
      * Returns the entire collection.
