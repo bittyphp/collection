@@ -11,7 +11,7 @@ interface ReadableCollectionInterface
      *
      * @return bool
      */
-    public function has($key);
+    public function has(string $key): bool;
 
     /**
      * Gets the value for a key if it exists in the collection.
@@ -23,12 +23,12 @@ interface ReadableCollectionInterface
      *
      * @return mixed
      */
-    public function get($key, $default = null);
+    public function get(string $key, $default = null);
 
     /**
      * Returns the entire collection.
      *
-     * @return array
+     * @return iterable
      */
-    public function all();
+    public function all(): iterable;
 }
