@@ -2,6 +2,8 @@
 
 namespace Bitty\Collection;
 
+use Bitty\Collection\ReadableCollectionInterface;
+
 class ReadableArrayCollection implements ReadableCollectionInterface
 {
     /**
@@ -30,7 +32,7 @@ class ReadableArrayCollection implements ReadableCollectionInterface
      */
     public function get(string $key, $default = null)
     {
-        if (!isset($this->data[$key])) {
+        if (!array_key_exists($key, $this->data)) {
             return $default;
         }
 

@@ -2,6 +2,8 @@
 
 namespace Bitty\Collection;
 
+use Bitty\Collection\ReadableCollectionInterface;
+
 interface WritableCollectionInterface extends ReadableCollectionInterface
 {
     /**

@@ -2,6 +2,9 @@
 
 namespace Bitty\Collection;
 
+use Bitty\Collection\ReadableArrayCollection;
+use Bitty\Collection\WritableCollectionInterface;
+
 class WritableArrayCollection extends ReadableArrayCollection implements WritableCollectionInterface
 {
     /**
