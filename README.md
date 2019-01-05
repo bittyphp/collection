@@ -15,6 +15,57 @@ It's best to install using [Composer](https://getcomposer.org/).
 $ composer require bittyphp/bitty-collection
 ```
 
-## TODO:
+## Readable Collections
 
-Finish writing this.
+Readable collections MUST implement `Bitty\Collection\ReadableCollectionInterface`. The interface only offers the very basic methods: `has()`, `get()`, and `all()`.
+
+### Basic Usage
+
+```php
+<?php
+
+use Bitty\Collection\ReadableArrayCollection;
+
+$collection = new ReadableArrayCollection(
+    [
+        'foo' => 'bar',
+        'baz' => ['blar', 'blah', 'blam'],
+    ]
+);
+
+// Check if data exists.
+if ($collection->has('foo')) {
+    // Do something.
+}
+
+// Get data, or get a default value if it doesn't exist.
+$default = 'not set';
+$value = $collection->get('foo', $default);
+
+// Get all the data.
+$data = $collection->all();
+
+```
+
+## Writable Collections
+
+Writable collections MUST implement `Bitty\Collection\WritableCollectionInterface`. The interface extends `Bitty\Collection\ReadableCollectionInterface` and adds an additional `set()`.
+
+### Basic Usage
+
+```php
+<?php
+
+use Bitty\Collection\WritableArrayCollection;
+
+$collection = new WritableArrayCollection(
+    [
+        'foo' => 'bar',
+        'baz' => ['blar', 'blah', 'blam'],
+    ]
+);
+
+// Add new data to the collection.
+$collection->set('key', 'value');
+
+```
