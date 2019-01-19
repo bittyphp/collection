@@ -1,5 +1,5 @@
 {
-    "name": "bittyphp/bitty-collection",
+    "name": "bittyphp/collection",
     "type": "library",
     "description": "Simple collections.",
     "license": "MIT",
