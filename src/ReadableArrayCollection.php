@@ -9,7 +9,7 @@ class ReadableArrayCollection implements ReadableCollectionInterface
     /**
      * @var array
      */
-    protected $data = null;
+    protected $data = [];
 
     /**
      * @param array $data
@@ -24,7 +24,7 @@ class ReadableArrayCollection implements ReadableCollectionInterface
      */
     public function has(string $key): bool
     {
-        return isset($this->data[$key]);
+        return array_key_exists($key, $this->data);
     }
 
     /**
