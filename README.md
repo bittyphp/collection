@@ -70,3 +70,29 @@ $collection = new WritableArrayCollection(
 $collection->set('key', 'value');
 
 ```
+
+## Removable Collections
+
+Removable collections MUST implement `Bitty\Collection\RemovableCollectionInterface`. The interface extends `Bitty\Collection\WritableCollectionInterface` and adds an additional `remove()` and `clear()`.
+
+### Basic Usage
+
+```php
+<?php
+
+use Bitty\Collection\RemovableArrayCollection;
+
+$collection = new RemovableArrayCollection(
+    [
+        'foo' => 'bar',
+        'baz' => ['blar', 'blah', 'blam'],
+    ]
+);
+
+// Remove one item.
+$collection->remove('foo');
+
+// Clear all the data.
+$collection->clear();
+
+```
