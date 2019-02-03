@@ -13,7 +13,7 @@ class RemovableArrayCollectionTest extends TestCase
     /**
      * @var RemovableArrayCollection
      */
-    protected $fixture = null;
+    private $fixture = null;
 
     protected function setUp(): void
     {
