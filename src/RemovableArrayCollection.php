@@ -12,9 +12,11 @@ class RemovableArrayCollection extends WritableArrayCollection implements Remova
      */
     public function remove(string $key): void
     {
-        if (array_key_exists($key, $this->data)) {
-            unset($this->data[$key]);
+        if (!array_key_exists($key, $this->data)) {
+            return;
         }
+
+        unset($this->data[$key]);
     }
 
     /**
