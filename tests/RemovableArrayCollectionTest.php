@@ -40,6 +40,17 @@ class RemovableArrayCollectionTest extends TestCase
         self::assertFalse($actual);
     }
 
+    public function testRemoveWhenNotSet(): void
+    {
+        $key = uniqid('key');
+
+        $this->fixture->remove($key);
+
+        $actual = $this->fixture->has($key);
+
+        self::assertFalse($actual);
+    }
+
     public function testClear(): void
     {
         $this->fixture->set(uniqid(), uniqid());
